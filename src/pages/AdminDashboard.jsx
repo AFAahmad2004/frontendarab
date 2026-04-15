@@ -56,7 +56,7 @@
 
     // ========== PRODUCTS ==========
     const fetchProducts = async () => {
-      const res = await fetch("http://127.0.0.1:5000/products");
+      const res = await fetch("https://arab-decoration-backend.onrender.com/products");
       const data = await res.json();
       setProducts(data);
     };
@@ -78,7 +78,7 @@
         setProductMsg({ text: "يرجى تعبئة جميع الحقول", type: "error" }); return;
       }
       try {
-        const res = await fetch("http://127.0.0.1:5000/add_product", {
+        const res = await fetch("https://arab-decoration-backend.onrender.com/add_product", {
           method: "POST",
           headers: headers(),
           body: JSON.stringify({ ...product, image: imageBase64 }),
@@ -100,13 +100,13 @@
 
     const handleDeleteProduct = async (id) => {
       if (!window.confirm("هل تريد حذف هذا المنتج؟")) return;
-      await fetch(`http://127.0.0.1:5000/delete_product/${id}`, { method: "DELETE", headers: headers() });
+      await fetch(`https://arab-decoration-backend.onrender.com/delete_product/${id}`, { method: "DELETE", headers: headers() });
       fetchProducts();
     };
 
     // ========== UPDATES ==========
     const fetchUpdates = async () => {
-      const res = await fetch("http://127.0.0.1:5000/updates");
+      const res = await fetch("https://arab-decoration-backend.onrender.com/updates");
       const data = await res.json();
       setUpdates(data);
     };
@@ -115,7 +115,7 @@
       if (!update.title || !update.content) {
         setUpdateMsg({ text: "يرجى تعبئة جميع الحقول", type: "error" }); return;
       }
-      const res = await fetch("http://127.0.0.1:5000/add_update", {
+      const res = await fetch("https://arab-decoration-backend.onrender.com/add_update", {
         method: "POST", headers: headers(),
         body: JSON.stringify(update),
       });
@@ -131,7 +131,7 @@
 
     const handleDeleteUpdate = async (id) => {
       if (!window.confirm("حذف هذا التحديث؟")) return;
-      await fetch(`http://127.0.0.1:5000/delete_update/${id}`, { method: "DELETE", headers: headers() });
+      await fetch(`https://arab-decoration-backend.onrender.com/delete_update/${id}`, { method: "DELETE", headers: headers() });
       fetchUpdates();
     };
 

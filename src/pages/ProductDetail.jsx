@@ -31,7 +31,7 @@ export default function ProductDetail() {
   const [imgLoaded, setImgLoaded] = useState(false);
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:5000/products/${id}`)
+    fetch(`https://arab-decoration-backend.onrender.com/products/${id}`)
       .then(res => { if (!res.ok) throw new Error(); return res.json(); })
       .then(data => { setProduct(data); setLoading(false); })
       .catch(() => { setError("المنتج غير موجود"); setLoading(false); });

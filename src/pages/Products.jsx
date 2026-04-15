@@ -31,7 +31,7 @@ export default function Products() {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`http://127.0.0.1:5000/products?category=${category}`)
+    fetch(`https://arab-decoration-backend.onrender.com/products?category=${category}`)
       .then(r => r.json())
       .then(d => { setProducts(d); setLoading(false); })
       .catch(() => { setError("تعذر تحميل المنتجات"); setLoading(false); });
