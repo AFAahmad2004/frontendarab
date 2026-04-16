@@ -36,7 +36,7 @@ export default function Contact() {
         {/* Info Cards */}
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px", marginBottom: "36px" }}>
           {[
-            { icon: "🏢", label: "المهنس المعماري : حمزة عرب",     value: "269 897 956 963+" },
+            { icon: "🏢", label: "المهندس المعماري : حمزة عرب",     value: "269 897 956 963+" },
             { icon: "🏢", label: "مدير المشاريع : عقبة عرب",     value: "287 462 951 963+" },
             { icon: "📧", label: "البريد",      value: "hamzaarab987@gmail.com" },
             { icon: "📍", label: "الموقع",      value: "ادلب / ارمناز - لدينا تنفيذ في جميع المحافظات السورية" },
